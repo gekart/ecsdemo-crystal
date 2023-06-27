@@ -21,9 +21,14 @@ spec:
         app: ecsdemo-crystal
     spec:
       containers:
-      - image: brentley/ecsdemo-crystal:latest
+      - image: gekart/ecsdemo-crystal:latest
         imagePullPolicy: Always
         name: ecsdemo-crystal
         ports:
         - containerPort: 3000
           protocol: TCP
+        env:
+        - name: MY_HOST_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.hostIP
