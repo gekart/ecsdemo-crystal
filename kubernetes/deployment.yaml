@@ -21,7 +21,7 @@ spec:
         app: ecsdemo-crystal
     spec:
       containers:
-      - image: gekart/ecsdemo-crystal:latest
+      - image: gekart/ecsdemo-crystal:v5
         imagePullPolicy: Always
         name: ecsdemo-crystal
         ports:
